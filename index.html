@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRIDE_NAME ❤️ GROOM_NAME | Wedding Invitation</title>
+<style>
+  :root{
+    --gold:#d4af37;
+    --maroon:#5a0e1a;
+    --cream:#fff8ef;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Georgia', serif;
+    background:linear-gradient(180deg,#fff8ef,#fdf1dc);
+    color:var(--maroon);
+    text-align:center;
+    overflow-x:hidden;
+  }
+  .section{
+    padding:60px 20px;
+    border-bottom:1px solid rgba(212,175,55,.3);
+  }
+  h1{font-size:2.2em; color:var(--maroon);}
+  h2{font-size:1.2em; color:var(--gold); font-weight:normal; margin-top:6px;}
+  .names{font-size:2.5em; margin:20px 0; color:var(--maroon);}
+  .subtitle{font-size:1.1em; opacity:.8; margin-bottom:20px;}
+  img.icon{width:120px; margin:20px auto; display:block;}
+  .couple-photos{display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin:20px 0;}
+  .couple-photos img{width:160px; height:160px; object-fit:cover; border-radius:50%; border:4px solid var(--gold);}
+  .details-grid{display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:30px;}
+  .detail-card{background:#fff; border:1px solid var(--gold); border-radius:12px; padding:20px 30px; min-width:180px;}
+  .countdown{display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;}
+  .countdown div{background:var(--maroon); color:var(--cream); border-radius:10px; padding:15px 20px; min-width:80px;}
+  .countdown span{display:block; font-size:1.8em;}
+  a.map-btn{display:inline-block; margin-top:20px; padding:12px 24px; background:var(--maroon); color:#fff; text-decoration:none; border-radius:30px;}
+  form{max-width:400px; margin:20px auto; text-align:left;}
+  form label{display:block; margin:10px 0 4px;}
+  form select, form input, form button{width:100%; padding:10px; border-radius:8px; border:1px solid var(--gold);}
+  form button{background:var(--maroon); color:#fff; border:none; margin-top:16px; cursor:pointer; font-size:1em;}
+  .invite-overlay{
+    position:fixed; inset:0; background:var(--maroon); color:#fff;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:999;
+  }
+  .invite-overlay button{
+    margin-top:30px; padding:14px 30px; border-radius:30px; border:none;
+    background:var(--gold); color:var(--maroon); font-size:1em; cursor:pointer;
+  }
+  #rsvpMsg{margin-top:14px; font-weight:bold;}
+</style>
+</head>
+<body>
+
+<!-- ===== OPENING OVERLAY ===== -->
+<div class="invite-overlay" id="overlay">
+  <h1 style="color:#fff;">🕉️ శ్రీరస్తు</h1>
+  <div class="names" style="color:#fff;">BRIDE_NAME ❤️ GROOM_NAME</div>
+  <p>Wedding Invitation</p>
+  <button onclick="document.getElementById('overlay').style.display='none'; document.getElementById('music').play();">🔔 Open Invitation</button>
+</div>
+
+<audio id="music" loop>
+  <source src="assets/nadaswaram.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ===== BLESSING LINES ===== -->
+<div class="section">
+  <h1>శ్రీరస్తు</h1><h2>Sri Rastu</h2>
+  <h1>శుభమస్తు</h1><h2>Shubhamastu</h2>
+  <h1>అవిఘ్నమస్తు</h1><h2>Avighnamastu</h2>
+  <img class="icon" src="assets/god.png" alt="God">
+</div>
+
+<!-- ===== COUPLE INTRO ===== -->
+<div class="section">
+  <h1>శుభ వివాహ మహోత్సవం</h1>
+  <h2>Grand Wedding Celebration</h2>
+  <div class="couple-photos">
+    <img src="assets/bride.png" alt="Bride">
+    <img src="assets/groom.png" alt="Groom">
+  </div>
+  <div class="names">BRIDE_NAME ❤️ GROOM_NAME</div>
+</div>
+
+<!-- ===== INVITATION TEXT ===== -->
+<div class="section">
+  <h1>🕉️ శుభ వివాహ ఆహ్వానం 🕉️</h1>
+  <h2>Wedding Invitation</h2>
+  <p style="max-width:600px;margin:20px auto;line-height:1.8;">
+    పెద్దల ఆశీస్సులతో... బంధుమిత్రుల ప్రేమాభిమానాలతో...<br>
+    మా ప్రియమైన <b>BRIDE_NAME</b> మరియు <b>GROOM_NAME</b> వారి వివాహ మహోత్సవానికి
+    మీరు మీ కుటుంబ సమేతంగా విచ్చేసి ఆశీర్వదించవలసిందిగా సాదరంగా ఆహ్వానిస్తున్నాము.
+  </p>
+  <p style="max-width:600px;margin:20px auto;line-height:1.8;">
+    With blessings of elders and love of family members, we cordially invite you
+    and your family to grace the wedding ceremony and bless the newlyweds.
+  </p>
+</div>
+
+<!-- ===== WEDDING DETAILS ===== -->
+<div class="section">
+  <h1>💍 వివాహ వివరాలు</h1>
+  <h2>Wedding Details</h2>
+  <div class="details-grid">
+    <div class="detail-card">
+      <h3>📅 తేదీ</h3>
+      <p>WEDDING_DATE</p>
+    </div>
+    <div class="detail-card">
+      <h3>⏰ ముహూర్తం</h3>
+      <p>WEDDING_TIME</p>
+    </div>
+    <div class="detail-card">
+      <h3>📍 వేదిక</h3>
+      <p>VENUE_NAME</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== COUNTDOWN ===== -->
+<div class="section">
+  <h1>⏳ శుభ ముహూర్తం వరకు</h1>
+  <h2>Wedding Countdown</h2>
+  <div class="countdown">
+    <div><span id="cd-days">0</span>Days</div>
+    <div><span id="cd-hours">0</span>Hours</div>
+    <div><span id="cd-mins">0</span>Minutes</div>
+    <div><span id="cd-secs">0</span>Seconds</div>
+  </div>
+</div>
+
+<!-- ===== VENUE MAP ===== -->
+<div class="section">
+  <h1>📍 వేదిక స్థానం</h1>
+  <h2>Venue Location</h2>
+  <h3>VENUE_NAME</h3>
+  <a class="map-btn" href="GOOGLE_MAPS_LINK" target="_blank">Open Google Maps</a>
+</div>
+
+<!-- ===== BLESSINGS QUOTE ===== -->
+<div class="section">
+  <h1>🙏 ఆశీర్వచనాలు</h1>
+  <h2>Blessings</h2>
+  <p style="max-width:600px;margin:20px auto;line-height:1.8;">
+    వివాహం అనేది రెండు హృదయాల కలయిక<br>
+    Marriage is the union of two hearts and families<br><br>
+    ఏడు అడుగులు... ఏడు జన్మల అనుబంధం...
+  </p>
+</div>
+
+<!-- ===== RSVP ===== -->
+<div class="section">
+  <h1>💌 RSVP</h1>
+  <form id="rsvpForm" onsubmit="return handleRsvp(event)">
+    <label>Name</label>
+    <input type="text" required>
+    <label>Are you attending?</label>
+    <select required>
+      <option value="">Select</option>
+      <option>Attending</option>
+      <option>Not Attending</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="rsvpMsg"></div>
+</div>
+
+<!-- ===== CLOSING ===== -->
+<div class="section">
+  <h1>మీ రాక మా భాగ్యం</h1>
+  <h2>Your Presence Is Our Blessing</h2>
+  <p>మీ ఆశీర్వాదం మా బలం</p>
+  <p>Your Blessings Are Our Strength</p>
+  <p style="margin-top:20px; font-size:1.3em;">🙏 Bless The Couple</p>
+</div>
+
+<script>
+  // ===== COUNTDOWN LOGIC =====
+  // Set this to the exact wedding date/time
+  const weddingDate = new Date("2026-12-25T07:30:00").getTime();
+
+  function updateCountdown(){
+    const now = new Date().getTime();
+    const dist = weddingDate - now;
+    if(dist < 0){
+      document.getElementById('cd-days').textContent = 0;
+      document.getElementById('cd-hours').textContent = 0;
+      document.getElementById('cd-mins').textContent = 0;
+      document.getElementById('cd-secs').textContent = 0;
+      return;
+    }
+    document.getElementById('cd-days').textContent = Math.floor(dist/(1000*60*60*24));
+    document.getElementById('cd-hours').textContent = Math.floor((dist%(1000*60*60*24))/(1000*60*60));
+    document.getElementById('cd-mins').textContent = Math.floor((dist%(1000*60*60))/(1000*60));
+    document.getElementById('cd-secs').textContent = Math.floor((dist%(1000*60))/1000);
+  }
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  // ===== RSVP HANDLER (in-memory only; hook up a backend/Google Form for real storage) =====
+  function handleRsvp(e){
+    e.preventDefault();
+    document.getElementById('rsvpMsg').textContent = "Thank you! Your response has been recorded. 🙏";
+    e.target.reset();
+    return false;
+  }
+</script>
+
+</body>
+</html>
